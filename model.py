@@ -4,7 +4,6 @@ import spacy
 from string import punctuation
 from transcript import get_transcript_of_yt_video
 from translate import g_translate
-from download import makeTextFile
 import pdb
 nltk.download('stopwords')
 
@@ -109,7 +108,4 @@ def nlp_model(v_id):
             i+=1
         final_summary_length = len(english_summary)
         return original_text_length, final_summary_length, english_summary, hindi_translated_summary, punjabi_translated_summary
-        makeTextFile("English", english_summary)
-        makeTextFile("Hindi", hindi_translated_summary)
-        makeTextFile("Punjabi", punjabi_translated_summary)
         
